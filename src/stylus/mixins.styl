@@ -31,23 +31,23 @@ not_desktop()
         block
 
 desktop()
-    @media (min-width: desktop-width) and (min-width: desktop-width + 1px)
+    @media (min-width: desktop-width + 1px)
         block
 
 xs_desktop() // old MBP
-    @media (min-width: desktop-width) and (max-width 1280px)
+    @media (min-width: desktop-width + 1px) and (max-width 1280px)
         block
 
 sm_desktop() // new MBP/MBA
-    @media (min-width: desktop-width) and (max-width 1440px)
+    @media (min-width: desktop-width + 1px) and (max-width 1440px)
         block
 
 md_desktop()
-    @media (min-width: desktop-width) and (max-width 1680px)
+    @media (min-width: desktop-width + 1px) and (max-width 1680px)
         block
 
 lg_desktop()
-    @media (min-width: desktop-width) and (min-width 1681px)
+    @media (min-width: desktop-width + 1px) and (min-width 1681px)
         block
 
 sprite_padding_top(spriteWidth, spriteHeight, frame)
