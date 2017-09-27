@@ -1,52 +1,52 @@
-var gulp = require("gulp");
-var stylus = require("gulp-stylus");
-var autoprefixer = require("gulp-autoprefixer");
-var sourcemaps = require("gulp-sourcemaps");
-var concat = require("gulp-concat");
-var nunjucks = require("gulp-nunjucks");
-var browserSync = require("browser-sync");
-var imagemin = require("gulp-imagemin");
-var pngquant = require("imagemin-pngquant");
+var gulp = require('gulp');
+var stylus = require('gulp-stylus');
+var autoprefixer = require('gulp-autoprefixer');
+var sourcemaps = require('gulp-sourcemaps');
+var concat = require('gulp-concat');
+var nunjucks = require('gulp-nunjucks');
+var browserSync = require('browser-sync');
+var imagemin = require('gulp-imagemin');
+var pngquant = require('imagemin-pngquant');
 
-gulp.task("style", function() {
+gulp.task('style', function() {
   return gulp
-    .src("src/stylus/style.styl")
+    .src('src/stylus/style.styl')
     .pipe(sourcemaps.init())
     .pipe(stylus())
     .pipe(autoprefixer())
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest("./dist/css"))
+    .pipe(gulp.dest('./dist/css'))
     .pipe(browserSync.reload({ stream: true }));
 });
 
-gulp.task("html", function() {
+gulp.task('html', function() {
   return gulp
-    .src("src/template/*.html")
+    .src('src/template/*.html')
     .pipe(nunjucks.compile())
-    .pipe(gulp.dest("dist"))
+    .pipe(gulp.dest('dist'))
     .pipe(browserSync.reload({ stream: true }));
 });
 
-gulp.task("css-vendors", function() {
+gulp.task('css-vendors', function() {
   gulp
-    .src(["node_modules/swiper/dist/css/swiper.css"])
-    .pipe(concat("vendors.css"))
-    .pipe(gulp.dest("dist/css"));
+    .src(['node_modules/swiper/dist/css/swiper.css'])
+    .pipe(concat('vendors.css'))
+    .pipe(gulp.dest('dist/css'));
 });
 
-gulp.task("js-vendors", function() {
+gulp.task('js-vendors', function() {
   gulp
     .src([
-      "node_modules/skrollr/dist/skrollr.min.js",
-      "node_modules/swiper/dist/js/swiper.min.js"
+      'node_modules/skrollr/dist/skrollr.min.js',
+      'node_modules/swiper/dist/js/swiper.min.js'
     ])
-    .pipe(concat("vendors.min.js"))
-    .pipe(gulp.dest("dist/js"));
+    .pipe(concat('vendors.min.js'))
+    .pipe(gulp.dest('dist/js'));
 });
 
-gulp.task("image", function() {
+gulp.task('image', function() {
   gulp
-    .src("src/img/*")
+    .src('src/img/*')
     .pipe(
       imagemin({
         optimizationLevel: 2,
@@ -55,21 +55,21 @@ gulp.task("image", function() {
         use: [pngquant()]
       })
     )
-    .pipe(gulp.dest("dist/img"));
+    .pipe(gulp.dest('dist/img'));
 });
 
-gulp.task("watch", function() {
-  gulp.watch("src/stylus/**/*.styl", ["style"]);
-  gulp.watch("src/template/**/*.html", ["html"]);
+gulp.task('watch', function() {
+  gulp.watch('src/stylus/**/*.styl', ['style']);
+  gulp.watch('src/template/**/*.html', ['html']);
 });
 
-gulp.task("browser-sync", function() {
+gulp.task('browser-sync', function() {
   browserSync({
     server: {
-      baseDir: "dist"
+      baseDir: 'dist'
     }
   });
 });
 
-gulp.task("start", ["browser-sync", "watch"]);
-gulp.task("build", ["style", "css-vendors", "js-vendors", "image"]);
+gulp.task('start', ['browser-sync', 'watch']);
+gulp.task('build', ['html', 'style', 'css-vendors', 'js-vendors', 'image']);
