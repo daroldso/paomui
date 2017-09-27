@@ -290,7 +290,7 @@ img
         .skrollr &
             transform translateX(-50%)
             left 50%
-            top 150px
+            top 17%
 
         .swiper &
             +desktop()
@@ -371,6 +371,10 @@ img
                 width 48%
                 top 6%
                 right 0
+            +xs_desktop()
+                width 42%
+                top 13%
+
         .swiper &
             max-width 550px
             +mobile_phablet()
@@ -393,6 +397,10 @@ img
             +sm_desktop()
                 left 12%
 
+            +xs_desktop()
+                top 150px
+                max-width 41%
+
         .swiper &
             max-width 450px
             +mobile_phablet()
@@ -405,6 +413,8 @@ img
             max-width 24%
             +sm_desktop()
                 top 27%
+            +xs_desktop()
+                top 32%
 
         .swiper &
             +mobile_phablet()
@@ -419,7 +429,8 @@ img
             .skrollr &
                 top 34%
                 left 0
-
+                +xs_desktop()
+                    top 36%
 
         &-2
             width paomui_6_2_width
@@ -431,6 +442,8 @@ img
                 max-width 31%
                 top 25%
                 left 23%
+                +xs_desktop()
+                    top 27%
 
             .swiper &
                 +mobile_phablet()
@@ -465,6 +478,9 @@ img
             top 140px
             right 30px
             max-width 49%
+            +xs_desktop()
+                max-width 46%
+                right 20px
 
         .swiper &
             max-width 620px
@@ -502,6 +518,8 @@ img
             left 50%
             transform translateX(-50%)
             margin 0 auto
+            +xs_desktop()
+                max-width: 32%;
 
         .swiper &
             max-width 450px
@@ -671,6 +689,7 @@ img
 
         .right-frame
             width 602px
+            top 10px
             right 0
 
             img
@@ -685,9 +704,6 @@ img
                 width 19%
                 left 13%
 
-            +xs_desktop()
-                left: 5%;
-
         .hp1-text2
             width 21%
             top 29%
@@ -696,9 +712,6 @@ img
             +md_desktop()
                 width 17%
                 right 13%
-
-            +xs_desktop()
-                right 5%
 
         .hp1-text1,
         .hp1-text2
@@ -738,6 +751,10 @@ img
             transform translateX(-50%)
             text-align center
 
+            +xs_desktop()
+                width 27%
+                top 14%
+
     .page-4
         .left-frame
             top 20px
@@ -758,6 +775,9 @@ img
             +sm_desktop()
                 top 37%
                 left 14%
+
+            +xs_desktop()
+                width 35%
 
     .page-5
         .left-frame
@@ -785,6 +805,16 @@ img
             left 0
             right 0
             text-align center
+            margin 0 auto
+
+        .top-frame
+            +xs_desktop()
+                top 12%
+                width 76%
+
+        .hp6-text1
+            +xs_desktop()
+                width 34%
 
     .page-7
 
@@ -794,6 +824,9 @@ img
 
             +sm_desktop()
                 left 7%
+            +xs_desktop()
+                left 4%
+                width 48%
 
         .hp7-text1
             width 25%
@@ -806,6 +839,8 @@ img
             +sm_desktop()
                 top 26%
                 left 16%
+            +xs_desktop()
+                left 13%
 
     .page-8
 
@@ -825,6 +860,8 @@ img
                 max-width 31%
             +sm_desktop()
                 max-width 28%
+            +xs_desktop()
+                top 240px
 
     .page-9
 
