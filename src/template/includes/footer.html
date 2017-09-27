@@ -4,6 +4,7 @@
             </footer>
         </div> <!-- End of content -->
         <script src="js/vendors.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.8.1/js/perfect-scrollbar.min.js"></script>
         <script>
             var lazy = lazyload();
             var preloader = document.getElementById('preloader');
@@ -47,6 +48,13 @@
                         page_9: 15400
                     }
                 });
+
+                var aboutusText = document.getElementById('about1-text');
+                if (aboutusText) {
+                    Ps.initialize(aboutusText, {
+                      wheelPropagation: true
+                    });
+                }
             }
 
             function mobileSetup() {
