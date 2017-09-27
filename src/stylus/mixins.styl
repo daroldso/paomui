@@ -3,51 +3,51 @@ tablet-width = 768px
 desktop-width = 1024px
 
 mobile()
-    @media (max-width: large-mobile-width - 1px)
+    @media (max-width: large-mobile-width - 1px) 
         block
 
 mobile_phablet()
-    @media (max-width: tablet-width - 1px)
+    @media (max-width: tablet-width - 1px) 
         block
 
 phablet()
-    @media (min-width: large-mobile-width) and (max-width: tablet-width - 1px)
+    @media (min-width: large-mobile-width) and (max-width: tablet-width - 1px) 
         block
 
 phablet_tablet()
-    @media (min-width: large-mobile-width) and (max-width: desktop-width - 1px)
+    @media (min-width: large-mobile-width) and (max-width: desktop-width - 1px) 
         block
 
 tablet()
-    @media (min-width: tablet-width) and (max-width: desktop-width - 1px)
+    @media (min-width: tablet-width) and (max-width: desktop-width - 1px) 
         block
 
 tablet_desktop()
-    @media (min-width: tablet-width)
+    @media (min-width: tablet-width) 
         block
 
 not_desktop()
-    @media (max-width: desktop-width)
+    @media (max-width: desktop-width) 
         block
 
 desktop()
-    @media (min-width: desktop-width + 1px)
+    @media (min-width: desktop-width + 1px) 
         block
 
-xs_desktop() // old MBP
-    @media (min-width: desktop-width) and (max-width 1280px)
+xs_desktop()
+    @media (max-width 1280px)
         block
 
-sm_desktop() // new MBP/MBA
-    @media (min-width: desktop-width) and (max-width 1440px)
+sm_desktop()
+    @media (max-width 1440px)
         block
 
 md_desktop()
-    @media (min-width: desktop-width) and (max-width 1680px)
+    @media (max-width 1680px)
         block
 
 lg_desktop()
-    @media (min-width: desktop-width) and (min-width 1681px)
+    @media (min-width 1681px)
         block
 
 sprite_padding_top(spriteWidth, spriteHeight, frame)
