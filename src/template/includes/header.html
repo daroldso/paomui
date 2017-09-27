@@ -15,9 +15,16 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
         <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107121985-1"></script>
         <script>
             var isLargeScreen = (window.innerWidth > 1280);
             var isDesktop = (window.innerWidth > 1024);
+
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments)};
+            gtag('js', new Date());
+
+            gtag('config', 'UA-107121985-1');
         </script>
     </head>
     <body style="background: url(img/bg_pattern.png)">
