@@ -919,9 +919,10 @@ img
 
                 +md_desktop()
                     height 95%
-
                 +sm_desktop()
                     height 101%
+                +xs_desktop()
+                    top 9%
 
             .page__title
                 background-image url(../img/about1_title.png)
@@ -929,6 +930,8 @@ img
 
                 +md_desktop()
                     height 106px
+                +xs_desktop()
+                    height 90px
 
             .about1-text
                 top 20%
@@ -944,16 +947,24 @@ img
                     max-width 64%
                     top 22%
                     right 8%
+                +xs_desktop()
+                    top 22%
+                    overflow auto
+                    padding 0 20px
+                    height 490px
 
                 dl
                     +md_desktop()
                         line-height 1.3
-
+                dt
+                    font-weight bold
                 dd
                     +md_desktop()
                         margin-bottom 13px
                     +sm_desktop()
                         margin-bottom 10px
+                    +xs_desktop()
+                        margin-bottom 8px
 
                 p
                     +md_desktop()
@@ -970,6 +981,8 @@ img
 
                 +md_desktop()
                     height 104px
+                +xs_desktop()
+                    height 90px
 
             .paomui
                 width 302px
@@ -987,9 +1000,10 @@ img
 
                 +md_desktop()
                     max-width 1190px
-
                 +sm_desktop()
                     max-width 1130px
+                +xs_desktop()
+                    max-width 1040px
 
 .favorite-list
     margin 0
@@ -1020,88 +1034,138 @@ img
         flex-basis 25%
         position relative
 
-        &.food
+    &.food
+        +desktop()
             flex-basis 19%
             top 20px
 
-        &.movie
-            .favorite-item-inner
+        img
+            +xs_desktop()
+                max-width 90%
+
+    &.movie
+        .favorite-item-inner
+            +desktop()
                 width 150px
                 margin 0 auto
+            +xs_desktop()
+                width 130px
+                margin-top 20px
 
-        &.drink
+    &.drink
+        +desktop()
             top 50px
+        +xs_desktop()
+            top 20px
+            flex-basis 22%
 
-            .text-container
+        .text-container
+            +desktop()
                 float left
                 width 32%
+            +xs_desktop()
+                width 40%
+                margin-right 14px
+        img
+            +xs_desktop()
+                margin-top 40px
+                margin-left -30px
+                max-width 52%
 
-        &.instrument
-            .text-container
+    &.instrument
+        .text-container
+            +desktop()
                 float left
                 position: relative;
                 left: 58px;
                 top: 50px;
+        img
+            +xs_desktop()
+                max-width 130px
 
-        &.music
+    &.music
+        +desktop()
             flex-basis 280px
+        +xs_desktop()
+            margin-top 20px
 
-            .text-container
-                overflow hidden
+        .text-container
+            overflow hidden
 
-            .favorite-item__title
+        .favorite-item__title
+            +desktop()
                 float left
                 width 23%
                 min-width 86px
-            p
+        p
+            +desktop()
                 float left
                 width 76%
                 margin 0
+            +md_desktop()
+                width 74%
+            +xs_desktop()
+                width 73%
 
-                +md_desktop()
-                    width 74%
-
-            img
+        img
+            +desktop()
                 margin-left 30px
+            +sm_desktop()
+                width 250px
+            +xs_desktop()
+                width 220px
+                margin-left 80px
 
-                +sm_desktop()
-                    width 250px
 
 
-
-        &.color
+    &.color
+        +desktop()
             flex-basis 330px
             flex-grow 0
             padding-right 26px
+        +xs_desktop()
+            flex-basis 300px
+            padding-right 0px
 
-            .favorite-item-inner
+        .favorite-item-inner
+            +desktop()
                 width 166px
                 margin 0 auto
+            +sm_desktop()
+                margin-top -20px
+            +xs_desktop()
+                margin-top 0px
+                width 146px
 
-                +sm_desktop()
-                    margin-top -20px
-
-        &.sport
+    &.sport
+        +desktop()
             flex-grow 3
             top -30px
+        +sm_desktop()
+            top -50px
+        +xs_desktop()
+            top -60px
 
-            +sm_desktop()
-                top -50px
-
-            .text-container
+        .text-container
+            +desktop()
                 width 210px
+            +xs_desktop()
+                margin-left -20px
 
-            img
+        img
+            +desktop()
                 position absolute
                 top 70px
                 right 30px
                 max-height none
-
-                +md_desktop()
-                    height 227px
-
-                +sm_desktop()
-                    right 0px
+            +md_desktop()
+                height 227px
+            +sm_desktop()
+                right 0px
+            +xs_desktop()
+                height 200px
+                top 90px
+                right -10px
 
     +not_desktop()
         flex-basis 50%
@@ -1161,6 +1225,8 @@ img
         left 0
         right 0
         text-align center
+        +xs_desktop()
+            top 8%
 
     .page__title
         +desktop()
@@ -1177,6 +1243,8 @@ img
         position relative
         +desktop()
             padding-top 15%
+        +xs_desktop()
+            padding-top 12%
 
 .market-list
     padding 0
@@ -1190,7 +1258,8 @@ img
 .market
     flex-basis 260px
     margin 0 10px 20px
-
+    +xs_desktop()
+        flex-basis 22%
     +mobile_phablet()
         margin 0 10px 30px
     img
@@ -1211,7 +1280,8 @@ img
    ========================================================================== */
 .nav
     z-index 1000 !important
-
+.footer
+    z-index 1000
 /* ==========================================================================
    PLUGINS
    ========================================================================== */
