@@ -2,7 +2,7 @@
 To start developing
 ```
 npm install
-gulp start
+gulp run dev
 ```
 ### Plugins
 #### Skrollr
