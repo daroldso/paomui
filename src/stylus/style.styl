@@ -1021,6 +1021,10 @@ img
 
     +desktop()
         font-size 13px
+    +not_desktop()
+        padding 0 70px
+    +mobile_phablet()
+        padding 0 20px
 
 .favorite-item
     flex-grow 1
@@ -1033,8 +1037,6 @@ img
     .text-container
         +not_desktop()
             text-align center
-        +mobile_phablet()
-            text-align left
 
     +desktop()
         flex-basis 25%
@@ -1057,6 +1059,9 @@ img
             +xs_desktop()
                 width 130px
                 margin-top 20px
+            +not_desktop()
+                width auto
+                margin-top 0
 
     &.drink
         +desktop()
@@ -1064,6 +1069,8 @@ img
         +xs_desktop()
             top 20px
             flex-basis 22%
+        +not_desktop()
+            flex-basis 50%
 
         .text-container
             +desktop()
@@ -1072,6 +1079,8 @@ img
             +xs_desktop()
                 width 40%
                 margin-right 14px
+            +not_desktop()
+                width auto
         img
             +xs_desktop()
                 margin-top 40px
@@ -1248,7 +1257,7 @@ img
         margin 0 auto
         position relative
         +desktop()
-            padding-top 15%
+            padding-top 12%
         +sm_desktop()
             padding-top 13%
         +xs_desktop()
