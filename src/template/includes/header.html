@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>豹妹 Paomui</title>
+        <link rel="icon" type="image/png" href="favicon.png">
+        <link rel="stylesheet" href="css/vendors.css">
+        <link rel="stylesheet" href="css/style.css">
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script>
+        <script>
+            var isLargeScreen = (window.innerWidth > 1280);
+            var isDesktop = (window.innerWidth > 1024);
+        </script>
+    </head>
+    <body style="background: url(img/bg_pattern.png)">
+        <div id="preloader" class="preloader">
+            <img src="img/bg_pattern.png" alt="" style="display: none">
+            <img src="img/preloader.gif" alt="">
+        </div>
+        <div id="content" class="content hidden">
+            <header class="header">
+                <nav class="nav clearfix">
+                    <ul class="menu">
+                        <li class="menu-item"><a class="menu-link menu-link--homepage " href="index.html">豹頁</a></li>
+                        <li class="menu-item"><a class="menu-link menu-link--about {% if page === 'aboutus' %}active{% endif %}" href="about.html">關於豹妹</a></li>
+                        <li class="menu-item"><a class="menu-link menu-link--market {% if page === 'market' %}active{% endif %}" href="market.html">手作市集</a></li>
+                        <!-- <li class="menu-item"><a class="menu-link menu-link--eshop" href="">網上豹店</a></li> -->
+                        <!-- <li class="menu-item"><a class="menu-link menu-link--contact" href="">聯絡豹妹</a></li> -->
+                    </ul>
+                    <ul class="menu menu--social">
+                        <li class="menu-item">
+                            <a href="https://www.facebook.com/iampaomui/" target="_blank" class="menu-link menu-link--fb"></a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="https://www.instagram.com/iampaomui/" target="_blank" class="menu-link menu-link--ig"></a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="mailto:iampaomui@gmail.com" class="menu-link menu-link--email"></a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <main id="swiper-container" class="main page-{{ page }} swiper-container">

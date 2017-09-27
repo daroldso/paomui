@@ -1,0 +1,54 @@
+large-mobile-width = 600px
+tablet-width = 768px
+desktop-width = 1024px
+
+mobile()
+    @media (max-width: large-mobile-width - 1px) 
+        block
+
+mobile_phablet()
+    @media (max-width: tablet-width - 1px) 
+        block
+
+phablet()
+    @media (min-width: large-mobile-width) and (max-width: tablet-width - 1px) 
+        block
+
+phablet_tablet()
+    @media (min-width: large-mobile-width) and (max-width: desktop-width - 1px) 
+        block
+
+tablet()
+    @media (min-width: tablet-width) and (max-width: desktop-width - 1px) 
+        block
+
+tablet_desktop()
+    @media (min-width: tablet-width) 
+        block
+
+not_desktop()
+    @media (max-width: desktop-width) 
+        block
+
+desktop()
+    @media (min-width: desktop-width + 1px) 
+        block
+
+xs_desktop()
+    @media (max-width 1280px)
+        block
+
+sm_desktop()
+    @media (max-width 1440px)
+        block
+
+md_desktop()
+    @media (max-width 1680px)
+        block
+
+lg_desktop()
+    @media (min-width 1681px)
+        block
+
+sprite_padding_top(spriteWidth, spriteHeight, frame)
+    padding-top (((spriteHeight/(frame + 1))/spriteWidth)*100)%

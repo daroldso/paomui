@@ -1,0 +1,69 @@
+            </main>
+        </div>
+        <script src="js/vendors.min.js"></script>
+        <script>
+            var lazy = lazyload();
+            var preloader = document.getElementById('preloader');
+            var content = document.getElementById('content');
+
+            if (isLargeScreen) {
+                loadDesktopImages();
+            }
+
+            window.onload = function() {
+                preloader.classList.add('hidden');
+                content.classList.remove('hidden');
+
+                lazy.loadImages();
+
+                if (isDesktop) {
+                    desktopSetup();
+                } else {
+                    mobileSetup();
+                }
+            }
+
+            function loadDesktopImages() {
+                document.querySelectorAll('img.desktop').forEach(function(el) {
+                    var imgsrc = el.getAttribute('data-src');
+                    el.setAttribute('src', imgsrc);
+                });
+            }
+
+            function desktopSetup() {
+                var s = skrollr.init({
+                    constants: {
+                        page_1: 0,
+                        page_2: 1400,
+                        page_3: 3400,
+                        page_4: 5400,
+                        page_5: 7400,
+                        page_6: 9400,
+                        page_7: 11400,
+                        page_8: 13400,
+                        page_9: 15400
+                    }
+                });
+            }
+
+            function mobileSetup() {
+                document.querySelector('body')
+                    .classList.add('swiper');
+                document.getElementById('swiper-container')
+                    .classList.add('swiper-container');
+                document.getElementById('swiper-wrapper')
+                    .classList.add('swiper-wrapper');
+                document.querySelectorAll('.page').forEach(function(currentValue, currentIndex, listObj) {
+                    currentValue.classList.add('swiper-slide');
+                });
+                    
+                var mySwiper = new Swiper ('.swiper-container', {
+                    autoHeight: true,
+                    autoplay: 4000,
+                    autoplayDisableOnInteraction: true
+
+                })
+            }
+        </script>
+    </body>
+</html>
