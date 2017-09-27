@@ -916,11 +916,12 @@ img
                 left 0
                 right 0
                 text-align center
+                height 112%
 
                 +md_desktop()
-                    height 95%
+                    height 112%
                 +sm_desktop()
-                    height 101%
+                    height 112%
                 +xs_desktop()
                     top 9%
 
@@ -935,13 +936,20 @@ img
 
             .about1-text
                 top 20%
-                right 18%
-                max-width 910px
+                right 16%
+                max-width 940px
+                max-height 68vh
+                overflow auto
 
                 +md_desktop()
-                    top 18%
-                    right 12%
-                    max-width 56%
+                    padding 20px
+                    // top 18%
+                    // right 12%
+                    // max-width 56%
+                    top 23%
+                    max-width 54%
+                    right 15%
+                    max-height 63vh
 
                 +sm_desktop()
                     max-width 64%
@@ -949,8 +957,6 @@ img
                     right 8%
                 +xs_desktop()
                     top 22%
-                    overflow auto
-                    padding 0 20px
                     height 490px
 
                 dl
