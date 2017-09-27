@@ -58,22 +58,25 @@
             }
 
             function mobileSetup() {
-                document.querySelector('body')
-                    .classList.add('swiper');
-                document.getElementById('swiper-container')
-                    .classList.add('swiper-container');
-                document.getElementById('swiper-wrapper')
-                    .classList.add('swiper-wrapper');
-                document.querySelectorAll('.page').forEach(function(currentValue, currentIndex, listObj) {
-                    currentValue.classList.add('swiper-slide');
-                });
+                var swiperContainer = document.getElementById('swiper-container');
+                var swiperWrapper = document.getElementById('swiper-wrapper');
+                var pages = document.querySelectorAll('.page');
 
-                var mySwiper = new Swiper ('.swiper-container', {
-                    autoHeight: true,
-                    autoplay: 4000,
-                    autoplayDisableOnInteraction: true
+                document.querySelector('body').classList.add('swiper');
+                
+                if (swiperWrapper) {
+                    swiperContainer.classList.add('swiper-container');
+                    swiperWrapper.classList.add('swiper-wrapper');
+                    pages.forEach(function(currentValue, currentIndex, listObj) {
+                        currentValue.classList.add('swiper-slide');
+                    });
 
-                })
+                    var mySwiper = new Swiper ('.swiper-container', {
+                        autoHeight: true,
+                        autoplay: 4000,
+                        autoplayDisableOnInteraction: true
+                    })
+                }
             }
         </script>
     </body>
