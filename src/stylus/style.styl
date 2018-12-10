@@ -1302,7 +1302,39 @@ img
 /* ==========================================================================
    PLUGINS
    ========================================================================== */
-.swiper-slide {
+.swiper-slide
     padding 0 20px
     box-sizing: border-box
-}
+
+.icon-scroll,
+.icon-scroll:before
+    left: 50%
+
+.icon-scroll
+    position: fixed
+    width: 40px
+    height: 70px
+    // margin-left: -20px
+    bottom: 40px
+    box-shadow: inset 0 0 0 3px #9c5c0f
+    border-radius: 25px
+
+.icon-scroll:before
+    content: ''
+    position: absolute
+    width: 8px
+    height: 8px
+    background: #9c5c0f
+    margin-left: -4px
+    top: 8px
+    border-radius: 4px
+    animation-duration: 1.5s
+    animation-iteration-count: infinite
+    animation-name: scroll
+
+@keyframes scroll
+    0%
+        opacity: 1
+    100%
+        opacity: 0
+        transform: translateY(46px)
