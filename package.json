@@ -20,6 +20,6 @@
   },
   "dependencies": {
     "skrollr": "^0.6.26",
-    "swiper": "^3.4"
+    "swiper": "^4.4.6"
   }
 }
