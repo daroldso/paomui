@@ -35,6 +35,11 @@
             }
 
             function desktopSetup() {
+                var iconScroll = document.getElementById('icon-scroll');
+                if (iconScroll) {
+                    iconScroll.classList.remove('hidden');
+                }
+                
                 var s = skrollr.init({
                     constants: {
                         page_1: 0,
@@ -58,10 +63,21 @@
             }
 
             function mobileSetup() {
+                var swiperPrevButton = document.getElementById('swiper-button-prev');
+                var swiperNextButton = document.getElementById('swiper-button-next');
+
+                if (swiperPrevButton && swiperNextButton) {
+                    swiperPrevButton.classList.remove('hidden');
+                    swiperNextButton.classList.remove('hidden');
+                }
+                
+                setupSwiper();
+            }
+
+            function setupSwiper() {
                 var swiperContainer = document.getElementById('swiper-container');
                 var swiperWrapper = document.getElementById('swiper-wrapper');
                 var pages = document.querySelectorAll('.page');
-
                 document.querySelector('body').classList.add('swiper');
                 
                 if (swiperWrapper) {
@@ -74,8 +90,12 @@
                     var mySwiper = new Swiper ('.swiper-container', {
                         autoHeight: true,
                         autoplay: 4000,
-                        autoplayDisableOnInteraction: true
-                    })
+                        autoplayDisableOnInteraction: true,
+                        navigation: {
+                            nextEl: '#swiper-button-next',
+                            prevEl: '#swiper-button-prev'
+                        }
+                    });
                 }
             }
         </script>
